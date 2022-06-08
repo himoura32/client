@@ -16,7 +16,9 @@ class StreamList extends Component {
             Edit
           </Link>
           <Link
-            to={`/streams/delete/${stream.id}`} className='ui button negative'>
+            to={`/streams/delete/${stream.id}`}
+            className='ui button negative'
+          >
             Delete
           </Link>
         </div>
@@ -30,7 +32,7 @@ class StreamList extends Component {
           {this.renderAdmin(stream)}
           <i className='large middle aligned icon video' />
           <div className='content'>
-            {stream.title}
+            <Link to={`/streams/${stream.id}`} className='header'>{stream.title}</Link>
             <div className='description'>{stream.description}</div>
           </div>
         </div>
